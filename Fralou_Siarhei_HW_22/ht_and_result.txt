@@ -1,0 +1,122 @@
+ДЗ 22:
+
+1. Для себя - доделать первые два задание практики по XPATH, а именно:
+а. Откройте страницу https://s.onliner.by/tasks. Откройте консоль разработчика и вкладку Elements в ней.
+  Напишите xpath для поиска:
+
+Который найдет раздел "уборка"
+Который надет регион обслуживания "Минск"
+Который надет "Барахолка" на основном навигационном меню
+Практика на написание селекторов:
+
+//a[text()="Уборка"]
+//*[@class="service-form__checkbox-label"]/span/span[2]/span
+//*[starts-with(@href, "https://baraholka.onliner.by/")]/span
+
+б. Откройте страницу https://www.onliner.by/. Откройте консоль разработчика и вкладку Elements в ней.
+Напишите xpath для:
+Поиска логотипа onliner
+Поиска ссылки на каталог
+
+//*[@class="b-top-logo"]
+//*[@class="b-main-navigation__text"]/..
+
+
+2. Дз на сдачу:
+Файл locators.py:
+Для сайта https://baraholka.onliner.by/ написать локаторы (xpath или css - посмотрите, какой получится опимальным и решите):
+
+Поиска конопки "Разместить объявление"
+Найти сколько объявлений в разделе "Ноутбуки. Компьютеры. Apple. Оргтехника", категория "Видеокарты"
+Найти сколько объявлений в разделе "Женская одежда", категория "Платья"
+
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --path D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22\locators.py
+Testing started at 12:24 PM ...
+Launching pytest with arguments D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22\locators.py --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22
+
+============================= test session starts =============================
+collecting ... collected 1 item
+
+locators.py::test_baraholka_onliner PASSED                               [100%]Видеокарты:  726 Платья:  875
+
+
+======================== 1 passed, 1 warning in 7.49s =========================
+
+Process finished with exit code 0
+
+3. Файл test_clicker.py:
+всего 3 теста на каждый тип локатора:
+Откройте страницу: https://ultimateqa.com/complicated-page/
+Нажмите на 2-ю сверху кнопку во втором столбце используя:
+XPATH
+CSS selector
+class name
+
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --path D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22\test_clicker.py
+Testing started at 12:25 PM ...
+Launching pytest with arguments D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22\test_clicker.py --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22
+
+============================= test session starts =============================
+collecting ... collected 3 items
+
+test_clicker.py::test_clicker_1 PASSED                                   [ 33%]
+test_clicker.py::test_clicker_2 PASSED                                   [ 66%]
+test_clicker.py::test_clicker_3 PASSED                                   [100%]
+
+======================= 3 passed, 3 warnings in 14.11s ========================
+
+Process finished with exit code 0
+
+4. Файл test_submit.py:
+3 теста:
+тест1:
+Заполните форму обратной связи
+Нажмите на кнопку "Submit"
+Проверьте наличие сообщения "Form filled out successfully"
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --target test_submit.py::test_submit_1
+Testing started at 8:21 PM ...
+Launching pytest with arguments test_submit.py::test_submit_1 --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22
+
+============================= test session starts =============================
+collecting ... collected 1 item
+
+test_submit.py::test_submit_1 PASSED                                     [100%]
+
+======================== 1 passed, 1 warning in 9.40s =========================
+
+Process finished with exit code 0
+тест2:
+Заполните поле "Name"
+Нажмите на кнопку "Submit"
+Проверьте наличие сообщения об ошибке
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --target test_submit.py::test_submit_2
+Testing started at 8:21 PM ...
+Launching pytest with arguments test_submit.py::test_submit_2 --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22
+
+============================= test session starts =============================
+collecting ... collected 1 item
+
+test_submit.py::test_submit_2 PASSED                                     [100%]
+
+======================== 1 passed, 1 warning in 5.92s =========================
+
+Process finished with exit code 0
+тест3:
+Заполните поле "Message"
+Нажмите на кнопку "Submit"
+Проверьте наличие сообщения об ошибке
+
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --target test_submit.py::test_submit_3
+Testing started at 8:33 PM ...
+Launching pytest with arguments test_submit.py::test_submit_3 --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_22
+
+============================= test session starts =============================
+collecting ... collected 1 item
+
+test_submit.py::test_submit_3 PASSED                                     [100%]
+
+======================== 1 passed, 1 warning in 9.25s =========================
+
+Process finished with exit code 0
+
+Сообщение об ошибке есть на странице и его можно поассертить по имеющемуся тексту
