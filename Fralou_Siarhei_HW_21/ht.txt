@@ -1,0 +1,29 @@
+1. Создание пользователя:
+
+Открыйть сайт http://thedemosite.co.uk/savedata.php
+Ввести имя в поле username
+Ввести пароль в поле password
+Нажать на кнопку save
+Проверить, что username и password отображаются правильно
+
+
+2. Заполнить форму:
+
+Открыйть сайт https://demoqa.com/text-box
+Заполнить каждое поле
+Проверить результаты
+
+Result:
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --path D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_21\web_tests.py
+Testing started at 5:59 PM ...
+Launching pytest with arguments D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_21\web_tests.py --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_21
+
+============================= test session starts =============================
+collecting ... collected 2 items
+
+web_tests.py::test_web_first PASSED                                      [ 50%]
+web_tests.py::test_web_second PASSED                                     [100%]
+
+======================= 2 passed, 2 warnings in 21.74s ========================
+
+Process finished with exit code 0
