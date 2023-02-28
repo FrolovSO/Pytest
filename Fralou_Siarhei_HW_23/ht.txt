@@ -1,0 +1,31 @@
+D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --path D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_23\homework_task.py
+Testing started at 11:42 AM ...
+Launching pytest with arguments D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_23\homework_task.py --no-header --no-summary -q in D:\Education\Pathon\teachmeskills\python_lessons\puthon_pytest\Fralou_Siarhei_HW_23
+
+============================= test session starts =============================
+collecting ... collected 2 items
+
+homework_task.py::test_checkbox PASSED                                   [ 50%]
+homework_task.py::test_frames PASSED                                     [100%]
+
+============================= 2 passed in 20.29s ==============================
+
+Process finished with exit code 0
+
+ДЗ 23:
+1. test_checkbox: http://the-internet.herokuapp.com/dynamic_controls
+Найти чекбокс
+Нажать на кнопку
+Дождаться надписи “It’s gone”
+Проверить, что чекбокса нет
+Найти инпут
+Проверить, что он disabled
+Нажать на кнопку
+Дождаться надписи “It's enabled!”
+Проверить, что инпут enabled
+
+
+2. test_frames: http://the-internet.herokuapp.com/iframe
+Frames
+Открыть iFrame
+Проверить, что текст внутри параграфа равен “Your content goes here.”
