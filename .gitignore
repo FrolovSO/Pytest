@@ -132,3 +132,4 @@ dmypy.json
 .idea/workspace.xml
 .idea/inspectionProfiles/profiles_settings.xml
 >>>>>>> main
+.idea/puthon_pytest.iml

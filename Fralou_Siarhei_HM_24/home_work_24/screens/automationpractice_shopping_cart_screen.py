@@ -16,6 +16,7 @@ class AutomationpracticeShoppingCartScreen(BasePage):
 
     def check_shopping_cart(self):
         assert self.find_element(AutomationpracticeShoppingCartHomeLocators.your_shopping_cart_locator).is_displayed()
+        assert self.url in self.webdriver.current_url
 
     def check_cart_is_empty(self):
         cart_is_empty = self.find_element(AutomationpracticeShoppingCartHomeLocators.empty_cart_locator).text

@@ -1,2 +1,5 @@
 pytest
 selenium
+pytest-xdist
+pytest-bdd
+retrying
